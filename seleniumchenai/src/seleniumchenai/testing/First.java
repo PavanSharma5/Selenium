@@ -57,6 +57,20 @@ public class First {
 		FileUtils.copyFile(s, new File("C:\\Users\\Pavan sharma\\eclipse-workspace\\Hello\\seleniumchenai\\screenshot\\two.png"));
 	}
 
+	void home(WebDriver driver) {
+		WebElement findelement = driver.findElement(By.xpath("//a[text()='HOME']"));
+		Actions a1 = new Actions(driver);
+		a1.moveToElement(findelement).build().perform();
+		findelement.click();
+
+	}
+
+	void action2(WebDriver driver) {
+		WebElement findElement = driver.findElement(By.xpath("//a[text()='Online Courses']"));
+		Actions a1 = new Actions(driver);
+		a1.moveToElement(findElement).build().perform();
+		driver.findElement(By.xpath("//span[text()='Data Analytics']")).click();
+	}
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Pavan sharma\\DriversForSelenium\\chromedriver.exe");
@@ -69,7 +83,9 @@ public class First {
 		obj.ss(driver);
 		obj.actions(driver);
 		obj.ss2(driver);
-
+                obj.home(driver);
+		obj.action2(driver);
+	
 	}
 
 }
