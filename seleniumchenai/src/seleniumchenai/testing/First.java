@@ -40,7 +40,7 @@ public class First {
 		File source = ref.getScreenshotAs(OutputType.FILE);
 		// step3
 		File destination = new File(
-				"C:\\Users\\Pavan sharma\\eclipse-workspace\\Hello\\seleniumchenai\\screenshot\\one.png");
+				"C:\\Users\\Pavan sharma\\git\\Selenium\\.git\\seleniumchenai\\screenshot\\one.png");
 		// step4
 		FileUtils.copyFile(source, destination);
 
@@ -54,7 +54,7 @@ public class First {
 	}
 	void ss2(WebDriver driver) throws IOException {
 		File s = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(s, new File("C:\\Users\\Pavan sharma\\eclipse-workspace\\Hello\\seleniumchenai\\screenshot\\two.png"));
+		FileUtils.copyFile(s, new File("C:\\Users\\Pavan sharma\\git\\Selenium\\.git\\seleniumchenai\\screenshot\\two.png"));
 	}
 
 	void home(WebDriver driver) {
